@@ -1,5 +1,6 @@
 package com.ghani.online_course_mamagement.service;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class Services {
     }
 
     public Student assiningCourse(Long studentId, Long courseId) {
-        Set<Course> courseset = null;
+        Set<Course> courseset = new HashSet<>();
         Student s = studentjpa.findById(studentId).get();
         Course c = coursejpa.findById(courseId).get();
 
